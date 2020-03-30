@@ -1,5 +1,12 @@
 [user]
-	name = Mattia Della Mina
+	name = dellamina
 	email = mattia.dellamina@gmail.com
+	signingKey = ""
 [includeIf "gitdir:~/code/webtek/"]
 	path = .gitconfig-work
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
