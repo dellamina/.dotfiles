@@ -4,3 +4,6 @@
 [submodule "dotbot_plugin_aptget"]
 	path = dotbot_plugin_aptget
 	url = https://github.com/dein0s/dotbot_plugin_aptget.git
+[submodule "ohmyzsh"]
+	path = ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
