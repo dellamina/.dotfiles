@@ -10,7 +10,7 @@
         wget https://github.com/getferdi/ferdi/releases/download/v5.4.3/ferdi_5.4.3_amd64.deb &&
         sudo apt install ./ferdi_5.4.3_amd64.deb &&
         rm ferdi_5.4.3_amd64.deb
-        touch .lock/ferdi;
+        sudo -u $SUDO_USER touch .lock/ferdi;
         fi
       quiet: true
 

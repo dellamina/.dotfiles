@@ -4,6 +4,6 @@
         wget https://release.gitkraken.com/linux/gitkraken-amd64.deb &&
         sudo apt install ./gitkraken-amd64.deb &&
         rm gitkraken-amd64.deb
-        touch .lock/gitkraken;
+        sudo -u $SUDO_USER touch .lock/gitkraken;
         fi
       quiet: true
