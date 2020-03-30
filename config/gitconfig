@@ -1,0 +1,5 @@
+[user]
+	name = Mattia Della Mina
+	email = mattia.dellamina@gmail.com
+[includeIf "gitdir:~/code/webtek/"]
+	path = .gitconfig-work
