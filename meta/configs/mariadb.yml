@@ -1,0 +1,3 @@
+- aptget:
+    - mariadb-server
+    - dbeaver-ce

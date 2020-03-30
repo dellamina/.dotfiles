@@ -1,0 +1,9 @@
+- shell:
+    - description: Install gitkraken
+      command: if [ ! -e .lock/gitkraken ]; then
+        wget https://release.gitkraken.com/linux/gitkraken-amd64.deb &&
+        sudo apt install ./gitkraken-amd64.deb &&
+        rm gitkraken-amd64.deb
+        touch .lock/gitkraken;
+        fi
+      quiet: true

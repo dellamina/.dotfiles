@@ -1,0 +1,20 @@
+- shell:
+    - description: We need to install this before we use the aptget plugin
+      command: apt install python-apt
+      quiet: true
+
+- aptget:
+    - curl
+    - wget
+    - software-properties-common
+    - apt-transport-https
+    - ca-certificates
+    - gnupg-agent
+    - snapd
+    - htop
+    - p7zip
+    - p7zip-full
+    - p7zip-rar
+    - gconf2
+    - gconf-service
+    - gnome-tweaks

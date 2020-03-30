@@ -1,0 +1,4 @@
+aptget:
+    - network-manager-gnome
+    - network-manager-openvpn
+    - network-manager-openvpn-gnome

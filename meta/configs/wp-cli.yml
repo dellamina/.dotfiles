@@ -1,0 +1,12 @@
+- shell:
+    - description: Install wp-cli
+      command: if [ ! -e .lock/wp-cli ]; then
+        curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar &&
+        chmod +x wp-cli.phar &&
+        mv wp-cli.phar /usr/local/bin/wp &&
+        touch .lock/wp-cli;
+        fi
+      quiet: true
+    - description: Add wp-cli dotenv plugin
+      command: sudo -u $SUDO_USER wp package install aaemnnosttv/wp-cli-dotenv-command:^2.0
+      quiet: true

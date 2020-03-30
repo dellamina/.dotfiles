@@ -1,0 +1,10 @@
+- shell:
+    - description: Install deployer
+      command: if [ ! -e .lock/deployer ]; then
+        echo "Deployer desired version [6.7.0]?"; read version; [ -z "$version" ] && version="6.7.0";
+        curl -LO "https://deployer.org/releases/v${version}/deployer.phar" &&
+        mv deployer.phar /usr/local/bin/dep &&
+        chmod +x /usr/local/bin/dep
+        touch .lock/deployer;
+        fi
+      quiet: true
