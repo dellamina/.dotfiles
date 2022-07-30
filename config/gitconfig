@@ -2,7 +2,7 @@
 	name = dellamina
 	email = mattia.dellamina@gmail.com
 	signingKey = ""
-[includeIf "gitdir:~/code/webtek/"]
+[includeIf "gitdir:~/work/"]
 	path = .gitconfig-work
 [gpg]
 	program = gpg
@@ -10,3 +10,5 @@
 	gpgSign = false
 [tag]
 	forceSignAnnotated = false
+[cola]
+	spellcheck = false
