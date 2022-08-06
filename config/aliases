@@ -1,0 +1,49 @@
+# General
+v() {
+  nvim $(fzf)
+}
+alias vim="nvim"
+alias h="history"
+alias copy="xclip -selection clipboard"
+alias paste="xclip -o -selection clipboard"
+
+# Laravel
+alias art="artisan"
+alias tinker="artisan tinker"
+alias serve="artisan serve"
+alias mfs="artisan migrate:fresh --seed"
+
+# Docker
+alias d="docker"
+alias dc="docker-compose"
+alias dce="docker-compose exec"
+
+# Edit
+alias ecz="vim ~/.dotfiles/config/zshrc"
+alias eca="vim ~/.dotfiles/config/aliases"
+alias ect="vim ~/.dotfiles/config/alacritty.yml"
+
+# Node/NPM
+docker_node_cmd() {
+    cmd="$1"
+    shift
+    versions=(14 16 18 latest)
+    value=latest
+    if printf '%s\0' "${versions[@]}" | grep -Fxqz '"$1"'; then
+        value="$1"
+        shift
+    fi
+    sudo docker run -it -v "${PWD}":/app -w /app node:$value "$cmd" "$@"
+}
+
+dnode() {
+    docker_node_cmd node "$@"
+}
+dnpm() {
+    docker_node_cmd npm "$@"
+}
+
+dnpx() {
+    docker_node_cmd npx "$@"
+}
+

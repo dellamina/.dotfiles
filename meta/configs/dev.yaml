@@ -1,0 +1,6 @@
+- sudo:
+    - aptget:
+        - tree
+        - jq
+        - neofetch
+        - httpie

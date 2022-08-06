@@ -1,0 +1,13 @@
+- sudo:
+  - aptget:
+      ulauncher:
+        ppa_source: ppa:agornostal/ulauncher
+- shell:
+  - description: Launch ulauncher on startup
+    command: systemctl --user enable --now ulauncher
+    quiet: true
+- link:
+    ~/.config/ulauncher:
+        create: true
+        path: config/ulauncher
+        force: true

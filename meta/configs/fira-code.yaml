@@ -1,0 +1,7 @@
+- shell:
+    - description: Add universe repository
+      command: add-apt-repository universe
+      quiet: true
+- sudo:
+    - aptget:
+        - fonts-firacode

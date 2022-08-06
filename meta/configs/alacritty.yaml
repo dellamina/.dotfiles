@@ -1,0 +1,14 @@
+- sudo:
+    - shell:
+        - description: Add ppa
+          command: sudo add-apt-repository ppa:aslatter/ppa
+          quiet: true
+    - aptget:
+        - alacritty
+- shell:
+    - description: Set alacritty as default terminal
+      command: gsettings set org.gnome.desktop.default-applications.terminal exec /usr/bin/alacritty &&
+        gsettings set org.gnome.desktop.default-applications.terminal exec-arg "-x"
+      quiet: true
+- link:
+    ~/.alacritty.yml: config/alacritty.yml

@@ -1,0 +1,7 @@
+- snap:
+    - mysql-workbench-community
+- shell:
+    - description: Enable permissions
+      command: snap connect mysql-workbench-community:password-manager-service &&
+        snap connect mysql-workbench-community:ssh-keys
+      quiet: true

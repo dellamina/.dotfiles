@@ -1,0 +1,15 @@
+- sudo:
+    - shell:
+        - description: Add docker repository
+          command: if [ ! -e .lock/docker ]; then
+            curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - &&
+            sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable" &&
+            sudo apt update &&
+            sudo -u $SUDO_USER touch .lock/docker;
+            fi
+          quiet: true
+    - aptget:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-compose-plugin

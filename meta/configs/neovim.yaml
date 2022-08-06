@@ -1,0 +1,10 @@
+- sudo:
+    - aptget:
+        neovim:
+            ppa_source: ppa:neovim-ppa/stable
+        ripgrep:
+- link:
+    ~/.config/nvim:
+        create: true
+        path: config/nvim
+        force: true

@@ -1,0 +1,14 @@
+- aptget:
+    - wget
+    - curl
+    - software-properties-common
+    - apt-transport-https
+    - ca-certificates
+    - gnupg-agent
+    - htop
+    - p7zip
+    - p7zip-full
+    - p7zip-rar
+#    - gconf2
+#    - gconf-service
+#    - gnome-tweaks

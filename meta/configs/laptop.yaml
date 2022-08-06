@@ -1,0 +1,11 @@
+- sudo:
+    - aptget:
+        - tlp
+    - shell:
+        - description: Fix timezone for dualboot win Windoes 
+          command: timedatectl set-local-rtc 1
+          quiet: true
+        - description: Change grub resolution to be visible on a 4k 14" screen
+          command: sudo sed -i "/GRUB_GFXMODE/c\GRUB_GFXMODE=1280x1024" /etc/default/grub &&
+            sudo update-grub
+          quiet: true

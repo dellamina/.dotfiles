@@ -1,0 +1,10 @@
+- sudo:
+    - shell:
+        - description: Install chrome
+          command: if [ ! -e .lock/chrome ]; then
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+            sudo apt install ./google-chrome-stable_current_amd64.deb &&
+            rm google-chrome-stable_current_amd64.deb &&
+            sudo -u $SUDO_USER touch .lock/chrome;
+            fi
+          quiet: true

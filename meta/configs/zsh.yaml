@@ -1,0 +1,16 @@
+- sudo:
+    - aptget:
+        - zsh
+- sudo:
+    - shell:
+        - echo can use chsh -s $(which zsh) to make zsh your default shell
+        - description: Install mcfly
+          command: if [ ! -e .lock/mcfly ]; then
+            curl -LSfs https://raw.githubusercontent.com/cantino/mcfly/master/ci/install.sh | sh -s -- --git cantino/mcfly &&
+            sudo -u $SUDO_USER touch .lock/mcfly;
+            fi
+          quiet: true
+- link:
+    ~/.zshrc: config/zshrc
+    ~/.oh-my-zsh: ohmyzsh/
+    ~/.aliases: config/aliases

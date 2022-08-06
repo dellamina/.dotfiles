@@ -1,0 +1,23 @@
+{
+    "com.github.iboyperson.ulauncher-system": {
+        "id": "com.github.iboyperson.ulauncher-system",
+        "url": "https://github.com/iboyperson/ulauncher-system",
+        "updated_at": "2022-07-23T15:03:29.624222",
+        "last_commit": "667613bf7bb6b4affa4f2121b58589477cd89829",
+        "last_commit_time": "2021-11-08T18:16:55"
+    },
+    "com.github.rabin-io.ulauncher-windows-switcher": {
+        "id": "com.github.rabin-io.ulauncher-windows-switcher",
+        "url": "https://github.com/rabin-io/ulauncher-windows-switcher",
+        "updated_at": "2022-07-23T15:04:44.676108",
+        "last_commit": "3262ec2674e2c7da93467fa409041798991dc88b",
+        "last_commit_time": "2019-11-24T15:50:43"
+    },
+    "com.github.brpaz.ulauncher-file-search": {
+        "id": "com.github.brpaz.ulauncher-file-search",
+        "url": "https://github.com/brpaz/ulauncher-file-search",
+        "updated_at": "2022-07-23T15:08:13.412125",
+        "last_commit": "0ea61c2049b27f1ddfa81d1844876f21dd9d6e7b",
+        "last_commit_time": "2020-07-03T13:30:16"
+    }
+}

@@ -1,8 +1,0 @@
-- aptget:
-    - neofetch
-    - zsh
-    - httpie
-
-- shell:
-    - snap install code --classic
-    - snap install phpstorm --classic
