@@ -1,7 +1,6 @@
 - shell:
-    - description: Add universe repository
-      command: add-apt-repository universe
+    - description: Install Fira Code from nerd fonts
+      command: mkdir -p ~/.local/share/fonts &&
+        wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip &&
+        unzip FiraCode.zip -d ~/.local/share/fonts
       quiet: true
-- sudo:
-    - aptget:
-        - fonts-firacode
