@@ -99,9 +99,17 @@ _G.packer_plugins = {
     path = "/home/dellamina/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
-  ["telescope.nvim"] = {
+  ["telescope-repo.nvim"] = {
     loaded = true,
-    path = "/home/dellamina/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/home/dellamina/.local/share/nvim/site/pack/packer/start/telescope-repo.nvim",
+    url = "https://github.com/cljoly/telescope-repo.nvim"
+  },
+  ["telescope.nvim"] = {
+    config = { "\27LJ\2\2e\0\0\2\0\5\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0'\1\3\0B\0\2\0016\0\0\0'\1\1\0B\0\2\0029\0\2\0'\1\4\0B\0\2\1K\0\1\0\trepo\bfzf\19load_extension\14telescope\frequire\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = true,
+    path = "/home/dellamina/.local/share/nvim/site/pack/packer/opt/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["vim-matchup"] = {
@@ -112,6 +120,15 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd plenary.nvim ]]
+vim.cmd [[ packadd telescope.nvim ]]
+
+-- Config for: telescope.nvim
+try_loadstring("\27LJ\2\2e\0\0\2\0\5\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0'\1\3\0B\0\2\0016\0\0\0'\1\1\0B\0\2\0029\0\2\0'\1\4\0B\0\2\1K\0\1\0\trepo\bfzf\19load_extension\14telescope\frequire\0", "config", "telescope.nvim")
+
+time([[Sequenced loading]], false)
 if should_profile then save_profiles() end
 
 end)

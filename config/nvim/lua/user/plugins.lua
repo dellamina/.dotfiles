@@ -37,9 +37,15 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions by lots of plugins
+  use "cljoly/telescope-repo.nvim" -- Jump into the repositories of your filesystem
   use {"nvim-telescope/telescope-fzf-native.nvim", run = 'make' }
   use {
     "nvim-telescope/telescope.nvim", -- Fuzzy finder over lists
+    config = function()
+      require('telescope').load_extension("fzf")
+      require("telescope").load_extension("repo")
+    end,
+    after = "plenary.nvim"
   }
   use {"andymass/vim-matchup"} -- better % navigate and highlight
   use {"kyazdani42/nvim-web-devicons"} -- lua `fork` of vim-web-devicons for neovim
@@ -47,6 +53,7 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

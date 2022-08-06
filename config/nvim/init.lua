@@ -36,4 +36,5 @@ local map = require("user.utils").map
 map("n", "<Leader>ff", ":lua require('user.telescope-config').project_files()<CR>")
 map("n", "<Leader>fa", ":lua require('telescope.builtin').find_files()<CR>")
 map("n", "<Leader>fg", ":lua require('telescope.builtin').live_grep()<CR>")
+map("n", "<Leader>fp", ":lua require'telescope'.extensions.repo.list{}<CR>")
 
