@@ -1,6 +1,21 @@
 - sudo:
     - aptget:
+        - build-essential
         - tree
         - jq
         - neofetch
         - httpie
+        - fzf # A command-line fuzzy finder
+        - fd-find # A simple, fast and user-friendly alternative to 'find'
+        - ripgrep # recursive grep that respects you gitignore
+        - bat # A cat(1) clone with wings, mainly colorized output
+        - exa # A modern replacement for ls
+- shell:
+    - description: Symlink batcat to bat
+      command: if [ ! -e .lock/bat ]; then
+        mkdir -p ~/.local/bin &&
+        ln -s /usr/bin/batcat ~/.local/bin/bat &&
+        touch .lock/bat;
+        fi
+      quiet: true
+       

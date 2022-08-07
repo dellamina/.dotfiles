@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/dellamina/.oh-my-zsh"
@@ -102,9 +102,10 @@ setxkbmap -option caps:escape_shifted_capslock
 
 source ~/.aliases
 
+export BAT_THEME="Dracula"
+
 export MCFLY_KEY_SCHEME=vim
 export MCFLY_FUZZY=2
 export MCFLY_RESULTS=20
-export MCFLY_INTERFACE_VIEW=BOTTOM
+export MCFLY_INTERFACE_VIEW=TOP
 eval "$(mcfly init zsh)"
-

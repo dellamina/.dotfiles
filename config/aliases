@@ -1,11 +1,19 @@
 # General
 v() {
-  nvim $(fzf)
+  if [ $# -eq 0 ]
+  then
+    nvim $(fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}')
+  else
+    nvim "$@"
+  fi
 }
 alias vim="nvim"
 alias h="history"
 alias copy="xclip -selection clipboard"
 alias paste="xclip -o -selection clipboard"
+alias cat="bat"
+alias ls="exa"
+alias .="exa --long --icons"
 
 # Laravel
 alias art="artisan"
