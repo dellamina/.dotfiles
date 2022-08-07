@@ -38,3 +38,7 @@ map("n", "<Leader>fa", ":lua require('telescope.builtin').find_files()<CR>")
 map("n", "<Leader>fg", ":lua require('telescope.builtin').live_grep()<CR>")
 map("n", "<Leader>fp", ":lua require'telescope'.extensions.repo.list{}<CR>")
 
+-- Clever-F
+vim.g.clever_f_chars_match_any_signs = ";"
+vim.g.clever_f_smart_case = 1
+
