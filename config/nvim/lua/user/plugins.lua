@@ -57,6 +57,7 @@ return packer.startup(function(use)
     'notjedi/nvim-rooter.lua', -- A high performance plugin to change your working directory
     config = function() require'nvim-rooter'.setup() end
   }
+  use "rhysd/clever-f.vim" -- Extended f, F, t and T key mappings for Vim
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
