@@ -53,7 +53,10 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-
+  use {
+    'notjedi/nvim-rooter.lua', -- A high performance plugin to change your working directory
+    config = function() require'nvim-rooter'.setup() end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
